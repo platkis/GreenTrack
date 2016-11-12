@@ -22,6 +22,7 @@ public class CalendarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calendar);
         mCalendarView = (CalendarView) findViewById(R.id.calendar);
         transactionList = new ArrayList<>();
+        mRootRef = FirebaseDatabase.getInstance().getReference();
         mRootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -43,5 +44,6 @@ public class CalendarActivity extends AppCompatActivity {
 
             }
         });
+        int i =3;
     }
 }
