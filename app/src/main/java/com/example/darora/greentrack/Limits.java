@@ -5,29 +5,6 @@ package com.example.darora.greentrack;
  */
 
 public class Limits {
-    //    Financial - DELETE - DONE
-    //            Restaurants - DELETE
-    //    Home improvement - DELETE
-    //    Rental Car & Taxi - DELETE
-    //    Service & Parts - DELETE
-    //    Doctor - DELETE
-
-//    Uncategorized - CHANGE MISC
-//    Fast Food - GET RID
-//    Credit Card payment
-//            Groceries
-//    Coffee Shops
-
-
-//            Clothing
-//    Check - DELETE
-//    Electronics & Software
-//            Shopping
-//    Pharmacy
-    // ADD MEDICAL - DOCTOR + PHARMACY
-//    Cash & ATM
-//    Food & Dining - Fast food + food & dining + restaurants
-//            Vacation
     private double financial;
     private double uncategorized; // CHANGE TO MISC
     private double fastFood;
