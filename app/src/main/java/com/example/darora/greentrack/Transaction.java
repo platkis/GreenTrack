@@ -19,7 +19,7 @@ public class Transaction {
 
     }
 
-    public boolean isPending() {
+    public boolean getIsPending() {
         return pending;
     }
 
