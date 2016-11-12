@@ -30,51 +30,21 @@ public class Limits {
             //  Restaurants - CHANGE TO FOOD
             //    Fast Food - CHANGE TO FOOD
 
-    private double financial;
-    private double uncategorized; // CHANGE TO MISC
-    private double fastFood;
+    private double misc; // CHANGE TO MISC
+    private double foodDining;
     private double creditCard;
-    private double restaurants;
-    private double homeImprov;
-    private double carTaxi;
     private double groceries;
     private double coffee;
-    private double serviceParts;
-    private double doctor;
+    private double medical;
     private double clothing;
     private double electronics;
     private double shopping;
-    private double pharmacy;
-    private double food;
-    private double vacation;
-
+    private double cashAtm;
 
     public Limits() {
 
     }
 
-    public Limits(double financial, double uncategorized, double fastFood, double creditCard,
-                  double restaurants, double homeImprov, double carTaxi, double groceries,
-                  double coffee, double serviceParts, double doctor, double clothing, double electronics,
-                  double shopping, double pharmacy, double food, double vacation) {
-        this.financial = financial;
-        this.uncategorized = uncategorized;
-        this.fastFood = fastFood;
-        this.creditCard = creditCard;
-        this.restaurants = restaurants;
-        this.homeImprov = homeImprov;
-        this.carTaxi = carTaxi;
-        this.groceries = groceries;
-        this.coffee = coffee;
-        this.serviceParts = serviceParts;
-        this.doctor = doctor;
-        this.clothing = clothing;
-        this.electronics = electronics;
-        this.shopping = shopping;
-        this.pharmacy = pharmacy;
-        this.food = food;
-        this.vacation = vacation;
-    }
 
     public double getFinancial() {
         return financial;
