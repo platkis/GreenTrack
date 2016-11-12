@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "596792874886",
+    "firebase_url": "https://greentrack-9a8d1.firebaseio.com",
+    "project_id": "greentrack-9a8d1",
+    "storage_bucket": "greentrack-9a8d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596792874886:android:0b128a6fd490d922",
+        "android_client_info": {
+          "package_name": "com.example.darora.greentrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596792874886-o2nus8jh8qv4ffg4t0pkq3n3snqmjpno.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.darora.greentrack",
+            "certificate_hash": "1849BB0FA8AE967C41FE48C09DDF9AC582071D71"
+          }
+        },
+        {
+          "client_id": "596792874886-sb988uab6mc8ss0g3gc6g127th74hqu1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByI6W00rD6w1xc9zSu5iyEzFY8bTGhelM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596792874886-sb988uab6mc8ss0g3gc6g127th74hqu1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
