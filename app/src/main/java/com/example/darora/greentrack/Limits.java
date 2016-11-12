@@ -5,7 +5,7 @@ package com.example.darora.greentrack;
  */
 
 public class Limits {
-    private double misc; 
+    private double misc;
     private double foodDining;
     private double creditCard;
     private double groceries;
