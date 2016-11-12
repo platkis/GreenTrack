@@ -5,5 +5,4 @@ package com.example.darora.greentrack;
  */
 
 public class Limits {
-
 }
