@@ -1,10 +1,14 @@
 package com.example.darora.greentrack;
 
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
 /**
  * Created by darora on 11/12/16.
  */
 
-public class Transaction {
+public class Transaction implements Serializable{
     private boolean pending;
     private String currency;
     private double id;
