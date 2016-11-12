@@ -30,24 +30,16 @@ public class Limits {
             //  Restaurants - CHANGE TO FOOD
             //    Fast Food - CHANGE TO FOOD
 
-    private double financial;
-    private double uncategorized; // CHANGE TO MISC
-    private double fastFood;
+    private double misc; // CHANGE TO MISC
+    private double foodDining;
     private double creditCard;
-    private double restaurants;
-    private double homeImprov;
-    private double carTaxi;
     private double groceries;
     private double coffee;
-    private double serviceParts;
-    private double doctor;
+    private double medical;
     private double clothing;
     private double electronics;
     private double shopping;
-    private double pharmacy;
-    private double food;
-    private double vacation;
-
+    private double cashAtm;
 
     public Limits() {
 
