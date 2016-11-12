@@ -2,6 +2,8 @@ package com.example.darora.greentrack;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,29 +18,49 @@ import com.google.firebase.database.ValueEventListener;
 public class LimitsActivity extends AppCompatActivity {
     DatabaseReference mRoot = FirebaseDatabase.getInstance().getReference();
     Limits mLimits;
+    private SeekBar mMiscBar;
+    private TextView mMiscBarText;
+    public double RefreshRateValue;
+    private SettingsConfig mSettingsConfig;
 
     @Override
     protected void onCreate(Bundle onSavedInstanceState) {
+        mMiscBar = (SeekBar) findViewById(R.id.sbMisc);
         super.onCreate(onSavedInstanceState);
         final DatabaseReference mLimitsRef = mRoot.child("limits");
+        mMiscBarText = (TextView) findViewById(R.id.miscL);
+//        mLimitsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                if (dataSnapshot.exists()){
+//                    mLimits = dataSnapshot.getValue(Limits.class);
+////                    mRefreshRateBar.setProgress( mSettingsConfig.getRefreshRate().intValue());
+//                }
+//                else {
+//                    mLimitsRef.setValue(mLimits);
+//                }
+//
+//            }
 
-        mLimitsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+        // Sets up SeekBar
+        mMiscBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()){
-                    mLimits = dataSnapshot.getValue(Limits.class);
-//                    mRefreshRateBar.setProgress( mSettingsConfig.getRefreshRate().intValue());
-                }
-                else {
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                String miscText = "- $" + String.valueOf(progress);
 
-//                    mLimits = new Limits(1.0, true);
-                    mLimitsRef.setValue(mLimits);
-                }
+                RefreshRateValue = ((double) mMiscBar.getProgress());
+                mSettingsConfig.setRefreshRate(refreshRateValue);
+                mSettingsRef.child("refreshRate").setValue(mSettingsConfig.getRefreshRate());
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
 
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onStopTrackingTouch(SeekBar seekBar) {
 
             }
         });
