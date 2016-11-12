@@ -1,0 +1,4 @@
+Functionality:
+-daily reports for users
+-notifications for the user
+-setting page (setting budget, etc.)
