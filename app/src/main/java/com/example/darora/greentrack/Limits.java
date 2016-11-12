@@ -45,5 +45,5 @@ public class Limits {
     private double food;
     private double vacation;
 
-    
+
 }
