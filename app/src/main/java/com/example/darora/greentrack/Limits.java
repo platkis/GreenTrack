@@ -5,6 +5,7 @@ package com.example.darora.greentrack;
  */
 
 public class Limits {
+<<<<<<< HEAD
     //    Financial - DELETE - DONE
     //
     //    Home improvement - DELETE
@@ -31,6 +32,9 @@ public class Limits {
             //    Fast Food - CHANGE TO FOOD
 
     private double misc; // CHANGE TO MISC
+=======
+    private double misc;
+>>>>>>> slider-activity
     private double foodDining;
     private double creditCard;
     private double groceries;
@@ -41,59 +45,38 @@ public class Limits {
     private double shopping;
     private double cashAtm;
 
+    public Limits(double misc, double foodDining, double creditCard, double groceries, double coffee,
+                  double medical, double clothing, double electronics, double shopping, double cashAtm) {
+        this.misc = misc;
+        this.foodDining = foodDining;
+        this.creditCard = creditCard;
+        this.groceries = groceries;
+        this.coffee = coffee;
+        this.medical = medical;
+        this.clothing = clothing;
+        this.electronics = electronics;
+        this.shopping = shopping;
+        this.cashAtm = cashAtm;
+    }
+
     public Limits() {
 
     }
 
-    public Limits(double financial, double uncategorized, double fastFood, double creditCard,
-                  double restaurants, double homeImprov, double carTaxi, double groceries,
-                  double coffee, double serviceParts, double doctor, double clothing, double electronics,
-                  double shopping, double pharmacy, double food, double vacation) {
-        this.financial = financial;
-        this.uncategorized = uncategorized;
-        this.fastFood = fastFood;
-        this.creditCard = creditCard;
-        this.restaurants = restaurants;
-        this.homeImprov = homeImprov;
-        this.carTaxi = carTaxi;
-        this.groceries = groceries;
-        this.coffee = coffee;
-        this.serviceParts = serviceParts;
-        this.doctor = doctor;
-        this.clothing = clothing;
-        this.electronics = electronics;
-        this.shopping = shopping;
-        this.pharmacy = pharmacy;
-        this.food = food;
-        this.vacation = vacation;
+    public double getCashAtm() {
+        return cashAtm;
     }
 
-    public double getFinancial() {
-        return financial;
+    public double getMisc() {
+        return misc;
     }
 
-    public double getUncategorized() {
-        return uncategorized;
-    }
-
-    public double getFastFood() {
-        return fastFood;
+    public double getFoodDining() {
+        return foodDining;
     }
 
     public double getCreditCard() {
         return creditCard;
-    }
-
-    public double getRestaurants() {
-        return restaurants;
-    }
-
-    public double getHomeImprov() {
-        return homeImprov;
-    }
-
-    public double getCarTaxi() {
-        return carTaxi;
     }
 
     public double getGroceries() {
@@ -104,12 +87,8 @@ public class Limits {
         return coffee;
     }
 
-    public double getServiceParts() {
-        return serviceParts;
-    }
-
-    public double getDoctor() {
-        return doctor;
+    public double getMedical() {
+        return medical;
     }
 
     public double getClothing() {
@@ -122,17 +101,5 @@ public class Limits {
 
     public double getShopping() {
         return shopping;
-    }
-
-    public double getPharmacy() {
-        return pharmacy;
-    }
-
-    public double getFood() {
-        return food;
-    }
-
-    public double getVacation() {
-        return vacation;
     }
 }

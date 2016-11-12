@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbMisc"
+            android:layout_marginTop="15sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/miscL"
+            android:text="@string/miscellaneous"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_below="@id/sbMisc"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/miscNum"
+            android:textSize="20sp"
+            android:text="- 20"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_toRightOf="@id/miscL"
+            android:layout_below="@id/sbMisc"
+            android:layout_marginLeft="10sp"
+            />
+
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbFoodDining"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/miscNum"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodDiningL"
+            android:text="Food and Dining"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_below="@id/sbFoodDining"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/foodDiningNum"
+            android:textSize="20sp"
+            android:text="- 20"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_toRightOf="@id/foodDiningL"
+            android:layout_below="@id/sbFoodDining"
+            android:layout_marginLeft="10sp"
+            />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbCreditCard"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/foodDiningNum"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/creditCardL"
+            android:text="Credit Card"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_below="@id/sbCreditCard"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/creditCardNum"
+            android:textSize="20sp"
+            android:text="- 20"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_toRightOf="@id/creditCardL"
+            android:layout_below="@id/sbCreditCard"
+            android:layout_marginLeft="10sp"
+            />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbGroceries"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/creditCardL"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/groceriesL"
+            android:text="Groceries"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_below="@id/sbGroceries"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/groceriesNum"
+            android:textSize="20sp"
+            android:text="- 20"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_toRightOf="@id/groceriesL"
+            android:layout_below="@id/sbGroceries"
+            android:layout_marginLeft="10sp"
+            />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbCoffee"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/groceriesNum"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/coffeeL"
+            android:text="Coffee Shops"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_below="@id/sbCoffee"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/coffeeNum"
+            android:textSize="20sp"
+            android:text="- 20"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_toRightOf="@id/coffeeL"
+            android:layout_below="@id/sbCoffee"
+            android:layout_marginLeft="10sp"
+            />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbMedical"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/coffeeNum"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/medicalL"
+            android:text="Medical"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_below="@id/sbMedical"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/medicalNum"
+            android:textSize="20sp"
+            android:text="- 20"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_toRightOf="@id/medicalL"
+            android:layout_below="@id/sbMedical"
+            android:layout_marginLeft="10sp"
+            />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbClothing"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/medicalNum"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clothingL"
+            android:text="Groceries"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_below="@id/sbClothing"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clothingNum"
+            android:textSize="20sp"
+            android:text="- 20"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_toRightOf="@id/clothingL"
+            android:layout_below="@id/sbClothing"
+            android:layout_marginLeft="10sp"
+            />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbElectronics"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/clothingL"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/electronicsL"
+            android:text="Groceries"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_below="@id/sbElectronics"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/electronicsNum"
+            android:textSize="20sp"
+            android:text="- 20"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_toRightOf="@id/electronicsL"
+            android:layout_below="@id/sbElectronics"
+            android:layout_marginLeft="10sp"
+            />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbShopping"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/electronicsL"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shoppingL"
+            android:text="Shopping"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_below="@id/sbShopping"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shoppingNum"
+            android:textSize="20sp"
+            android:text="- 20"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10sp"
+            android:layout_toRightOf="@id/shoppingL"
+            android:layout_below="@id/sbShopping"
+            android:layout_marginLeft="10sp"
+            />
+    </RelativeLayout>
+</ScrollView>
