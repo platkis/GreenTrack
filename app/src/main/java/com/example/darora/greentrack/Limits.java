@@ -5,7 +5,6 @@ package com.example.darora.greentrack;
  */
 
 public class Limits {
-<<<<<<< HEAD
     //    Financial - DELETE - DONE
     //
     //    Home improvement - DELETE
@@ -31,10 +30,7 @@ public class Limits {
             //  Restaurants - CHANGE TO FOOD
             //    Fast Food - CHANGE TO FOOD
 
-    private double misc; // CHANGE TO MISC
-=======
     private double misc;
->>>>>>> slider-activity
     private double foodDining;
     private double creditCard;
     private double groceries;
