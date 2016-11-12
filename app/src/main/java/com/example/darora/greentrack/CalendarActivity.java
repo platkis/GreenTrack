@@ -21,8 +21,9 @@ public class CalendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
         mCalendarView = (CalendarView) findViewById(R.id.calendar);
-        transactionList = new ArrayList<>();
         mRootRef = FirebaseDatabase.getInstance().getReference();
+        transactionList = new ArrayList<>();
+        dateToTransactionMap = new HashMap<>();
         mRootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
