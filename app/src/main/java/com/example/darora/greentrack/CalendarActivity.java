@@ -7,6 +7,7 @@ import android.widget.CalendarView;
 public class CalendarActivity extends AppCompatActivity {
 
     CalendarView mCalendarView;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
