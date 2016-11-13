@@ -25,6 +25,32 @@ public class CalendarActivity extends AppCompatActivity {
         transactionList = new ArrayList<>();
         dateToTransactionMap = new HashMap<>();
         mRootRef = FirebaseDatabase.getInstance().getReference();
+
+        mRootRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                 for (DataSnapshot childSnapshot : dataSnapshot.getChildren()){
+                 Transaction childTrans = childSnapshot.getValue(Transaction.class);
+                 ArrayList<Transaction> updatedTransactionList = dateToTransactionMap.get(
+                 childTrans.getDate());
+                 if (updatedTransactionList == null){
+                 updatedTransactionList = new ArrayList<Transaction>();
+                 }
+                 updatedTransactionList.add(childTrans);
+                 dateToTransactionMap.put(childTrans.getDate(), updatedTransactionList);
+                 transactionList.add(childTrans);
+                 }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+
+
         mCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView calendarView, int y, int m, int d) {
@@ -42,42 +68,7 @@ public class CalendarActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /**
-        mRootRef.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                Transaction childTrans = dataSnapshot.getValue(Transaction.class);
-                ArrayList<Transaction> updatedTransactionList = dateToTransactionMap.get(
-                        childTrans.getDate());
-                if (updatedTransactionList == null){
-                    updatedTransactionList = new ArrayList<Transaction>();
-                }
-                updatedTransactionList.add(childTrans);
-                dateToTransactionMap.put(childTrans.getDate(), updatedTransactionList);
-                transactionList.add(childTrans);
-            }
 
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-        **/
     }
     @Override
     protected void onStart(){
@@ -85,6 +76,7 @@ public class CalendarActivity extends AppCompatActivity {
         mRootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                /**
                 for (DataSnapshot childSnapshot : dataSnapshot.getChildren()){
                     Transaction childTrans = childSnapshot.getValue(Transaction.class);
                     ArrayList<Transaction> updatedTransactionList = dateToTransactionMap.get(
@@ -96,6 +88,7 @@ public class CalendarActivity extends AppCompatActivity {
                     dateToTransactionMap.put(childTrans.getDate(), updatedTransactionList);
                     transactionList.add(childTrans);
                 }
+                 **/
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {

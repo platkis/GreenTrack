@@ -34,13 +34,11 @@ public class DailyReportActivity extends AppCompatActivity {
                 TextView txtView = new TextView(DailyReportActivity.this);
                 txtView.setText(transactionList.get(i).getDate() + "\t" +
                         transactionList.get(i).getName() + "\t" + transactionList.get(i).getAmount());
-                txtView.setTextSize(30);
+                txtView.setTextSize(15);
                 txtView.setPadding(0, (i * 30), 0, 0);
                 mLayout.setBackgroundColor(Color.TRANSPARENT);
                 mLayout.addView(txtView);
             }
         }
-
-
     }
 }
