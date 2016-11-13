@@ -81,18 +81,6 @@ public class LimitsActivity extends AppCompatActivity {
         mElectronicsBarText.setText(String.valueOf(mElectronicsBar.getProgress()));
         mShoppingBarText.setText(String.valueOf(mShoppingBar.getProgress()));
         mLimits = new Limits();
-//        mLimitsRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                if (dataSnapshot.exists()){
-//                    mLimits = dataSnapshot.getValue(Limits.class);
-////                    mRefreshRateBar.setProgress( mSettingsConfig.getRefreshRate().intValue());
-//                }
-//                else {
-//                    mLimitsRef.setValue(mLimits);
-//                }
-//
-//            }
 
         mLimitsRef.addValueEventListener(new ValueEventListener() {
             @Override
