@@ -9,7 +9,8 @@
     </style>
 
     <style name="GTheme" parent="Theme.AppCompat.Light">
-
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
         <item name="colorPrimary">#55B484</item>
         <item name="colorPrimaryDark">#3E8361</item>
         <item name="colorAccent">#ff6b8a</item>

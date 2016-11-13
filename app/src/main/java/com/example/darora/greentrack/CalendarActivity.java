@@ -1,8 +1,12 @@
 package com.example.darora.greentrack;
 
 import android.content.Intent;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.CalendarView;
 
 import com.google.firebase.database.*;
@@ -17,14 +21,26 @@ public class CalendarActivity extends AppCompatActivity {
     DatabaseReference mRootRef;
     ArrayList<Transaction> transactionList;
     HashMap<String, ArrayList<Transaction>> dateToTransactionMap;
+    DrawerLayout mDrawerLayout;
+    ActionBarDrawerToggle mDrawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
+        setContentView(R.layout.activity_cal_test);
+        Toolbar actionBar = (Toolbar) findViewById(R.id.action_bar);
+        setSupportActionBar(actionBar);
         mCalendarView = (CalendarView) findViewById(R.id.calendar);
         transactionList = new ArrayList<>();
         dateToTransactionMap = new HashMap<>();
         mRootRef = FirebaseDatabase.getInstance().getReference();
+
+
+        NavigationView mDrawerList = (NavigationView) findViewById(R.id.main_navigation);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, actionBar, R.string.drawer_open, R.string.drawer_close);
+        mDrawerLayout.addDrawerListener(mDrawerToggle);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         mRootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutCompat;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.GridLayout;
@@ -35,7 +36,8 @@ public class DailyReportActivity extends AppCompatActivity {
         ArrayList<Transaction> transactionList = (ArrayList<Transaction>) receivedBundle.getSerializable(
                 "transactionList");
         if (transactionList != null) {
-            //mLayout.set
+            //android.support.v7.app.ActionBar actionbar = getSupportActionBar();
+           // actionbar.setTitle(transactionList.get(0).getDate());
             for (int i = 0; i < transactionList.size(); i++) {
                 TextView nameTV = new TextView(DailyReportActivity.this);
                 String nameText = transactionList.get(i).getName();
