@@ -67,9 +67,6 @@ public class CalendarActivity extends AppCompatActivity {
             }
         });
 
-        
-
-
 
         mCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
