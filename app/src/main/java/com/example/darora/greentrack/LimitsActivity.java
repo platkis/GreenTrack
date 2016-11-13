@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+import com.google.firebase.database.*;
 /**
  * Created by darora on 11/12/16.
  */
@@ -93,6 +93,28 @@ public class LimitsActivity extends AppCompatActivity {
 //
 //            }
 
+        mLimitsRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Limits Sliders = dataSnapshot.getValue(Limits.class);
+                mMiscBar.setProgress((int) Sliders.getMiscellaneous());
+                mFoodBar.setProgress((int) Sliders.getFood());
+                mCreditBar.setProgress((int) Sliders.getCreditCard());
+                mGroceriesBar.setProgress((int) Sliders.getGroceries());
+                mCoffeeBar.setProgress((int) Sliders.getCoffee());
+                mMedicalBar.setProgress((int) Sliders.getMedical());
+                mClothingBar.setProgress((int) Sliders.getClothing());
+                mElectronicsBar.setProgress((int) Sliders.getElectronics());
+                mShoppingBar.setProgress((int) Sliders.getShopping());
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+
+        });
 
         // Sets up SeekBar
         mMiscBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
