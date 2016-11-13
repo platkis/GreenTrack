@@ -14,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CalendarView;
 
@@ -22,6 +24,8 @@ import com.google.firebase.database.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.StringTokenizer;
+
+import static android.R.id.message;
 
 public class CalendarActivity extends AppCompatActivity {
 
@@ -32,8 +36,6 @@ public class CalendarActivity extends AppCompatActivity {
     DrawerLayout mDrawerLayout;
     ActionBarDrawerToggle mDrawerToggle;
     Button mSetLimitsButton;
-    private AlarmManager alarmMgr;
-    private PendingIntent alarmIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +48,10 @@ public class CalendarActivity extends AppCompatActivity {
         dateToTransactionMap = new HashMap<>();
         mRootRef = FirebaseDatabase.getInstance().getReference();
 
-        pushNotification("HEY BITCH");
+
+
+
+
 
         NavigationView mDrawerList = (NavigationView) findViewById(R.id.main_navigation);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
