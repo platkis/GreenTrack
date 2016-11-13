@@ -51,7 +51,7 @@
             android:clickable="true"
             android:orientation="vertical">
             <Button
-                android:id="@+id/limits_button"
+                android:id="@+id/set_limits_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/set_limits"/>

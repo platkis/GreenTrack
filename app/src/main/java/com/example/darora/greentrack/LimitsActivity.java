@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -346,6 +347,8 @@ public class LimitsActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 mLimitsRef.setValue(mLimits);
+                Toast successToast = new Toast(LimitsActivity.this);
+                Toast.makeText(LimitsActivity.this, "Updated online database!", Toast.LENGTH_SHORT).show();
             }
         });
 

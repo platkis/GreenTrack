@@ -18,6 +18,9 @@
         <activity android:name=".DailyReportActivity">
 
         </activity>
+        <activity android:name=".LimitsActivity">
+
+        </activity>
     </application>
 
 </manifest>
