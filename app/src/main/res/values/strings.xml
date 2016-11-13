@@ -3,4 +3,5 @@
     <string name="set_limits">Set limits</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+    <string name="miscellaneous">Miscellaneous</string>
 </resources>

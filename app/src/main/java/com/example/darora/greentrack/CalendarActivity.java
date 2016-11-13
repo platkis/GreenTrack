@@ -7,6 +7,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CalendarView;
 
 import com.google.firebase.database.*;
@@ -23,12 +25,14 @@ public class CalendarActivity extends AppCompatActivity {
     HashMap<String, ArrayList<Transaction>> dateToTransactionMap;
     DrawerLayout mDrawerLayout;
     ActionBarDrawerToggle mDrawerToggle;
+    Button mSetLimitsButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cal_test);
         Toolbar actionBar = (Toolbar) findViewById(R.id.action_bar);
         setSupportActionBar(actionBar);
+        mSetLimitsButton = (Button) findViewById(R.id.set_limits_button);
         mCalendarView = (CalendarView) findViewById(R.id.calendar);
         transactionList = new ArrayList<>();
         dateToTransactionMap = new HashMap<>();
@@ -82,6 +86,13 @@ public class CalendarActivity extends AppCompatActivity {
                 Intent intent = new Intent(CalendarActivity.this, DailyReportActivity.class);
                 intent.putExtra("transactionList",transactionList);
                 startActivity(intent);
+            }
+        });
+
+        mSetLimitsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CalendarActivity.this, LimitsActivity.class));
             }
         });
 
