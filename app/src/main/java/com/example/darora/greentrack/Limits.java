@@ -15,24 +15,44 @@ public class Limits {
     public double electronics;
     public double shopping;
 
-    public double cashAtm;
-
-    public Limits(double miscellaneous, double food, double creditCard, double groceries, double coffee,
-                  double medical, double clothing, double electronics, double shopping, double cashAtm) {
-        this.miscellaneous = miscellaneous;
-        this.food = food;
-        this.creditCard = creditCard;
-        this.groceries = groceries;
-        this.coffee = coffee;
-        this.medical = medical;
-        this.clothing = clothing;
-        this.electronics = electronics;
-        this.shopping = shopping;
-        this.cashAtm = cashAtm;
-    }
-
     public Limits() {
 
+    }
+
+    public void setMiscellaneous(double miscellaneous) {
+        this.miscellaneous = miscellaneous;
+    }
+
+    public void setFood(double food) {
+        this.food = food;
+    }
+
+    public void setCreditCard(double creditCard) {
+        this.creditCard = creditCard;
+    }
+
+    public void setGroceries(double groceries) {
+        this.groceries = groceries;
+    }
+
+    public void setCoffee(double coffee) {
+        this.coffee = coffee;
+    }
+
+    public void setMedical(double medical) {
+        this.medical = medical;
+    }
+
+    public void setClothing(double clothing) {
+        this.clothing = clothing;
+    }
+
+    public void setElectronics(double electronics) {
+        this.electronics = electronics;
+    }
+
+    public void setShopping(double shopping) {
+        this.shopping = shopping;
     }
 
     public double getMiscellaneous() {
@@ -69,9 +89,5 @@ public class Limits {
 
     public double getShopping() {
         return shopping;
-    }
-
-    public double getCashAtm() {
-        return cashAtm;
     }
 }
